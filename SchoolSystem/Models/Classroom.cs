@@ -11,6 +11,9 @@ namespace SchoolSystem.Models
         [Required]
         public string Name { get; set; }
 
+        [Required]
+        public int Capacity { get; set; }
+
         public ICollection<Student> Students { get; set; }
     }
 }

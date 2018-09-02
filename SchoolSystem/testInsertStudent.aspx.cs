@@ -13,7 +13,7 @@ namespace SchoolSystem
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
-                var stud = new Student();
+                Student stud = new Student();
                 stud.FirstName = txtFName.Text;
                 stud.LastName = txtLName.Text;
                 stud.MobileNumber = txtMobile.Text;
