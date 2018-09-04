@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="testInsertInstructor.aspx.cs" Inherits="SchoolSystem.testInsertInstructor" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
+
     <br />
     <span style="text-decoration: underline"><strong>- Add new Instructor Profile.<br />
     </strong></span>

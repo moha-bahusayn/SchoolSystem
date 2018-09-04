@@ -50,6 +50,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -165,6 +168,7 @@
     <Content Include="testInsertStudent.aspx" />
     <Content Include="testInsertSubject.aspx" />
     <Content Include="testSearchStudent.aspx" />
+    <Content Include="testViewStudent.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -253,6 +257,13 @@
     </Compile>
     <Compile Include="testSearchStudent.aspx.designer.cs">
       <DependentUpon>testSearchStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testViewStudent.aspx.cs">
+      <DependentUpon>testViewStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testViewStudent.aspx.designer.cs">
+      <DependentUpon>testViewStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
