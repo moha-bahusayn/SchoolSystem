@@ -15,8 +15,8 @@ namespace SchoolSystem
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
-                Student std = db.Students.Find(2);
-
+                string firstName = View_txt.Text;
+                var studentList = db.Students.Where(s => s.FirstName.Contains(firstName)).ToList();
                 DataTable dt = new DataTable();
                 dt.Clear();
 
@@ -24,37 +24,14 @@ namespace SchoolSystem
                 dt.Columns.Add("First Name");
                 dt.Columns.Add("Last Name");
 
-                DataRow dr = dt.NewRow();
-                dr[0] = std.Id;
-                dr[1] = std.FirstName;
-                dr[2] = std.LastName;
-                dt.Rows.Add(dr);
-
-                StudentGridView.DataSource = dt;
-                StudentGridView.DataBind();
-            }
-        }
-
-        protected void DeleteBtn_Click(object sender, EventArgs e)
-        {
-            using (SchoolDBContext db = new SchoolDBContext())
-            {
-                Student std = db.Students.Find(2);
-                db.Students.Remove(std);
-                db.SaveChanges();
-                DataTable dt = new DataTable();
-                dt.Clear();
-
-                dt.Columns.Add("ID");
-                dt.Columns.Add("First Name");
-                dt.Columns.Add("Last Name");
-
-                DataRow dr = dt.NewRow();
-                dr[0] = std.Id;
-                dr[1] = std.FirstName;
-                dr[2] = std.LastName;
-                dt.Rows.Add(dr);
-
+                foreach (Student std in studentList)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr[0] = std.Id;
+                    dr[1] = std.FirstName;
+                    dr[2] = std.LastName;
+                    dt.Rows.Add(dr);
+                }
                 StudentGridView.DataSource = dt;
                 StudentGridView.DataBind();
             }
@@ -64,25 +41,70 @@ namespace SchoolSystem
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
-                var std = db.Students.First<Student>();
-                std.FirstName = "Michael";
-                db.SaveChanges();
+                //if (Update_txt.Text.Contains(number))
+                //{
+                //No Update happens. request valid info again from end user.
+                //}
 
-                DataTable dt = new DataTable();
-                dt.Clear();
+                string firstName = View_txt.Text;
+                var studentList = db.Students.Where(s => s.FirstName.Contains(firstName)).ToList();
 
-                dt.Columns.Add("ID");
-                dt.Columns.Add("First Name");
-                dt.Columns.Add("Last Name");
+                foreach (Student std in studentList)
+                {
+                    std.FirstName = Update_txt.Text;
+                    db.SaveChanges();
 
-                DataRow dr = dt.NewRow();
-                dr[0] = std.Id;
-                dr[1] = std.FirstName;
-                dr[2] = std.LastName;
-                dt.Rows.Add(dr);
+                    DataTable dt = new DataTable();
+                    dt.Clear();
 
-                StudentGridView.DataSource = dt;
-                StudentGridView.DataBind();
+                    dt.Columns.Add("ID");
+                    dt.Columns.Add("First Name");
+                    dt.Columns.Add("Last Name");
+
+                    DataRow dr = dt.NewRow();
+                    dr[0] = std.Id;
+                    dr[1] = std.FirstName;
+                    dr[2] = std.LastName;
+                    dt.Rows.Add(dr);
+
+                    StudentGridView.DataSource = dt;
+                    StudentGridView.DataBind();
+                }
+            }
+        }
+
+        protected void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            using (SchoolDBContext db = new SchoolDBContext())
+            {
+                //if (Update_txt.Text.Contains(number))
+                //{
+                //No Update happens. request valid info again from end user.
+                //}
+
+                string firstName = View_txt.Text;
+                var studentList = db.Students.Where(s => s.FirstName.Contains(firstName)).ToList();
+
+                foreach (Student std in studentList)
+                {
+                    db.Students.Remove(std);
+                    db.SaveChanges();
+                    DataTable dt = new DataTable();
+                    dt.Clear();
+
+                    dt.Columns.Add("ID");
+                    dt.Columns.Add("First Name");
+                    dt.Columns.Add("Last Name");
+
+                    DataRow dr = dt.NewRow();
+                    dr[0] = std.Id;
+                    dr[1] = std.FirstName;
+                    dr[2] = std.LastName;
+                    dt.Rows.Add(dr);
+
+                    StudentGridView.DataSource = dt;
+                    StudentGridView.DataBind();
+                }
             }
         }
     }

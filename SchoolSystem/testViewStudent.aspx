@@ -2,7 +2,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <p>
         <br />
-        View Student with ID = 2.</p>
+        &nbsp;- Control Student Data ( By First Name ).</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <asp:TextBox ID="View_txt" runat="server"></asp:TextBox>
+        <asp:Button ID="ViewBtn" runat="server" Text="View By First Name!" OnClick="ViewBtn_Click" />
+    </p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <asp:TextBox ID="Update_txt" runat="server"></asp:TextBox>
+        <asp:Button ID="UpdateBtn" runat="server" Text="Update First Name!" OnClick="UpdateBtn_Click" />
+    </p>
+    <p>
+        &nbsp;</p>
     <p>
         &nbsp;</p>
         <asp:GridView ID="StudentGridView" runat="server" EmptyDataText="No Records Found!" AllowPaging="True" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None">
@@ -19,16 +33,10 @@
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
     <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        <asp:Button ID="ViewBtn" runat="server" Text="View!" OnClick="ViewBtn_Click" />
-        <asp:Button ID="DeleteBtn" runat="server" Text="Delete!" />
-        <asp:Button ID="UpdateBtn" runat="server" Text="Update!" OnClick="UpdateBtn_Click" />
+        <asp:Button ID="DeleteBtn" runat="server" Text="Delete Student From Table!" />
     </p>
+    <p>
+        &nbsp;</p>
     <p>
         &nbsp;</p>
     <p>

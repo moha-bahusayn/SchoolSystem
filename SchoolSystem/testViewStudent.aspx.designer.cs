@@ -13,13 +13,13 @@ namespace SchoolSystem {
     public partial class testViewStudent {
         
         /// <summary>
-        /// StudentGridView control.
+        /// View_txt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView StudentGridView;
+        protected global::System.Web.UI.WebControls.TextBox View_txt;
         
         /// <summary>
         /// ViewBtn control.
@@ -31,13 +31,13 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Button ViewBtn;
         
         /// <summary>
-        /// DeleteBtn control.
+        /// Update_txt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DeleteBtn;
+        protected global::System.Web.UI.WebControls.TextBox Update_txt;
         
         /// <summary>
         /// UpdateBtn control.
@@ -47,5 +47,23 @@ namespace SchoolSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button UpdateBtn;
+        
+        /// <summary>
+        /// StudentGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView StudentGridView;
+        
+        /// <summary>
+        /// DeleteBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button DeleteBtn;
     }
 }
