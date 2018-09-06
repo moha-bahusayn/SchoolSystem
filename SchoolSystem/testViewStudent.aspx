@@ -40,7 +40,7 @@
         <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
     <p>
-        <asp:Button ID="DeleteBtn" runat="server" Text="Delete Student From Table!" />
+        <asp:Button ID="DeleteBtn" runat="server" Text="Delete Student From Table!" OnClick="DeleteBtn_Click" />
     </p>
     <p>
         &nbsp;

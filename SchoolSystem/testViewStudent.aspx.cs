@@ -1,8 +1,6 @@
 ﻿using SchoolSystem.Models;
 using System;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
 
 namespace SchoolSystem
@@ -20,6 +18,21 @@ namespace SchoolSystem
         }
 
         protected void ViewBtn_Click(object sender, EventArgs e)
+        {
+            ViewByFName();
+        }
+
+        protected void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            UpdateByFName();
+        }
+
+        protected void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            DeleteByFName();
+        }
+
+        private void ViewByFName()
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
@@ -48,7 +61,7 @@ namespace SchoolSystem
             }
         }
 
-        protected void UpdateBtn_Click(object sender, EventArgs e)
+        private void UpdateByFName()
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
@@ -88,25 +101,25 @@ namespace SchoolSystem
             }
         }
 
-        [DataObjectMethod(DataObjectMethodType.Delete)]
-        protected void DeleteBtn_Click(object sender, EventArgs e)
+        private void DeleteByFName()
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
                 //if (Update_txt.Text.Contains(number))
                 //{
-                //No Update happens. request valid info again from end user.
+                //    No Update happens.request valid info again from end user.
                 //}
 
                 string firstName = lblFirstName.Text;
 
                 //var studentList = db.Students.Where(s => s.FirstName.Contains(firstName)).ToList();
                 Student std = new Student();
-                std = db.Students.Where(s => s.FirstName.Contains(firstName)).FirstOrDefault();
+                std = db.Students.Where(s => s.FirstName == firstName).FirstOrDefault();
                 //foreach (Student std in studentList)
                 //{
+                //db.Students.Find(std);
                 db.Students.Remove(std);
-                db.Entry(std).State = EntityState.Deleted;
+                //db.Entry(std).State = EntityState.Deleted;
                 db.SaveChanges();
                 DataTable dt = new DataTable();
                 dt.Clear();
