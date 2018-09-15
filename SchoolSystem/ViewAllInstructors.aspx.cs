@@ -3,7 +3,7 @@ using System.Web.UI.WebControls;
 
 namespace SchoolSystem
 {
-    public partial class testViewAllStudents : System.Web.UI.Page
+    public partial class ViewAllInstructors : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -14,12 +14,12 @@ namespace SchoolSystem
             Response.Redirect("SuperuserDashboard.aspx");
         }
 
-        protected void StudentsGridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void InstructorsGridView_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "select")
             {
-                string selectedId = StudentsGridView.Rows[Convert.ToInt32(e.CommandArgument)].Cells[0].Text;
-                Response.Redirect("ViewStudent.aspx?selectedId=" + selectedId);
+                string selectedId = InstructorsGridView.Rows[Convert.ToInt32(e.CommandArgument)].Cells[0].Text;
+                Response.Redirect("ViewInstructor.aspx?selectedId=" + selectedId);
             }
         }
     }

@@ -1,11 +1,11 @@
 ﻿              TODO :
-			  
-			  2- add the enum schdules for the subject model and database [ Requires Delete any existing database.]
-			  
-			  3- In view student page, and view classroom page, you can assign students to classrooms, and vice versa.
-
-			  4- In view student page, and view subject page, you can assign students to subjects, and vice versa.
-
+			  1- Add search pages for instructor, classroom, and subject.
+			  2- in view instructor page, assign instructors to subjects.
+			  3- in view student page, assign students to classrooms, and subjects.
+			  4- in view subject page, assign subjects to students, and instructors.
 			  5- Update function to all models. [in view pages]. [ try catch exceptions.]
-             
-			 6- Global file, Initializer.
+			  6- Global file, Initializer.
+			  7- Add schedule selection in new subject page.
+			  8- Add hobbies and classroom ID in new student page.
+			  9- add birthdate and age columns to student table.
+			 10- create different levels of access the system ( Superuser, Student, Instructor).

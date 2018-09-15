@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace SchoolSystem
 {
-    public partial class testViewStudent : System.Web.UI.Page
+    public partial class ViewStudent : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +20,7 @@ namespace SchoolSystem
             {
                 string qString = Request.QueryString["selectedId"];
                 int selectedId = Int32.Parse(qString);
-                ViewStudent(selectedId);
+                ViewAStudent(selectedId);
             }
             catch (ArgumentNullException)
             {
@@ -28,7 +28,7 @@ namespace SchoolSystem
             }
         }
 
-        private void ViewStudent(int selectedId)
+        private void ViewAStudent(int selectedId)
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
@@ -57,10 +57,10 @@ namespace SchoolSystem
         protected void DeleteBtn_Click(object sender, EventArgs e)
         {
             int selectedId = Int32.Parse(lbl_id.Text);
-            DeleteStudent(selectedId);
+            DeleteAStudent(selectedId);
         }
 
-        private void DeleteStudent(int selectedId)
+        private void DeleteAStudent(int selectedId)
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {

@@ -29,9 +29,9 @@
                 <asp:Label ID="lbltable_name" runat="server" Text=""></asp:Label></td>
         </tr>
 
-            <td>Instructor:</td>
-            <td>
-                <asp:Label ID="lbltable_iName" runat="server" Text=""></asp:Label></td>
+        <td>Instructor:</td>
+        <td>
+            <asp:Label ID="lbltable_iName" runat="server" Text=""></asp:Label></td>
         </tr>
     </table>
 </asp:Content>

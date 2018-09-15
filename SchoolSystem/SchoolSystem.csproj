@@ -173,9 +173,15 @@
     <Content Include="InsertSubject.aspx" />
     <Content Include="SearchStudent.aspx" />
     <Content Include="SuperuserDashboard.aspx" />
+    <Content Include="ViewAllClassrooms.aspx" />
+    <Content Include="ViewAllInstructors.aspx" />
     <Content Include="ViewAllStudents.aspx" />
+    <Content Include="ViewAllSubjects.aspx" />
+    <Content Include="ViewClassroom.aspx" />
+    <Content Include="ViewInstructor.aspx" />
     <Content Include="ViewStudent.aspx" />
     <Content Include="TODO.txt" />
+    <Content Include="ViewSubject.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -280,6 +286,20 @@
     <Compile Include="SuperuserDashboard.aspx.designer.cs">
       <DependentUpon>SuperuserDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllClassrooms.aspx.cs">
+      <DependentUpon>ViewAllClassrooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAllClassrooms.aspx.designer.cs">
+      <DependentUpon>ViewAllClassrooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllInstructors.aspx.cs">
+      <DependentUpon>ViewAllInstructors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAllInstructors.aspx.designer.cs">
+      <DependentUpon>ViewAllInstructors.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewAllStudents.aspx.cs">
       <DependentUpon>ViewAllStudents.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -287,12 +307,40 @@
     <Compile Include="ViewAllStudents.aspx.designer.cs">
       <DependentUpon>ViewAllStudents.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllSubjects.aspx.cs">
+      <DependentUpon>ViewAllSubjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAllSubjects.aspx.designer.cs">
+      <DependentUpon>ViewAllSubjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClassroom.aspx.cs">
+      <DependentUpon>ViewClassroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewClassroom.aspx.designer.cs">
+      <DependentUpon>ViewClassroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewInstructor.aspx.cs">
+      <DependentUpon>ViewInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewInstructor.aspx.designer.cs">
+      <DependentUpon>ViewInstructor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewStudent.aspx.cs">
       <DependentUpon>ViewStudent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewStudent.aspx.designer.cs">
       <DependentUpon>ViewStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSubject.aspx.cs">
+      <DependentUpon>ViewSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSubject.aspx.designer.cs">
+      <DependentUpon>ViewSubject.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

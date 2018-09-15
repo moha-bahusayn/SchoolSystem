@@ -10,7 +10,7 @@
 namespace SchoolSystem {
     
     
-    public partial class ViewStudent {
+    public partial class ViewInstructor {
         
         /// <summary>
         /// lbl_id control.
@@ -20,15 +20,6 @@ namespace SchoolSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_id;
-        
-        /// <summary>
-        /// lbl_classroom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_classroom;
         
         /// <summary>
         /// lbl_fName control.
@@ -65,33 +56,6 @@ namespace SchoolSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_email;
-        
-        /// <summary>
-        /// Classroom_ddl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Classroom_ddl;
-        
-        /// <summary>
-        /// AddClassBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddClassBtn;
-        
-        /// <summary>
-        /// ClassroomSqlDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource ClassroomSqlDataSource;
         
         /// <summary>
         /// DeleteBtn control.

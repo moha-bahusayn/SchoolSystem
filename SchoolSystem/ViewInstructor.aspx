@@ -1,21 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewStudent.aspx.cs" Inherits="SchoolSystem.ViewStudent" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewInstructor.aspx.cs" Inherits="SchoolSystem.ViewInstructor" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="HeadScriptContent" runat="server">
-    <%--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-        swal("Hello world!");
-    </script>--%>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadScriptContent" runat="server">
 </asp:Content>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table class="table table-striped">
         <tr>
-            <td>Student ID:</td>
+            <td>Instructor ID:</td>
             <td>
                 <asp:Label ID="lbl_id" runat="server" Text=""></asp:Label></td>
-            <td>Classroom:</td>
+            <%--<td>Subject:</td>
             <td>
-                <asp:Label ID="lbl_classroom" runat="server" Text=""></asp:Label>
-            </td>
+                <asp:Label ID="lbl_subject" runat="server" Text=""></asp:Label>
+            </td>--%>
         </tr>
         <tr>
             <td>First Name:</td>
@@ -35,13 +31,13 @@
         </tr>
     </table>
 
-    <p>
-        Add Student to Classroom :
-        <asp:DropDownList ID="Classroom_ddl" runat="server" DataSourceID="ClassroomSqlDataSource" DataTextField="Name" DataValueField="Name">
+    <%-- <p>
+        Assign Instructor to Subject :
+        <asp:DropDownList ID="Subject_ddl" runat="server" DataSourceID="SubjectSqlDataSource" DataTextField="Name" DataValueField="Name">
         </asp:DropDownList>
-        <asp:Button ID="AddClassBtn" runat="server" Text="Add to Class." OnClick="AddClassBtn_Click" />
-        <asp:SqlDataSource ID="ClassroomSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [Name], [Capacity] FROM [Classrooms]"></asp:SqlDataSource>
-    </p>
+        <asp:Button ID="AddsubjectBtn" runat="server" Text="Assign to Subject." OnClick="AddSubjectBtn_Click" />
+        <asp:SqlDataSource ID="SubjectSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [Name], [ScheduleDay] FROM [Subjects]"></asp:SqlDataSource>
+    </p>--%>
     <p>
         <asp:Button ID="DeleteBtn" class="btn btn-danger active" runat="server" Text="Delete" OnClick="DeleteBtn_Click" />
     </p>
