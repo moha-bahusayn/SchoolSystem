@@ -18,7 +18,15 @@ namespace SchoolSystem
                 room.Capacity = Int32.Parse(txtCapacity.Text);
                 db.Classrooms.Add(room);
                 db.SaveChanges();
+                lbltable_name.Text = room.Name;
+                lbltable_capacity.Text = room.Capacity.ToString();
+                CreationMesssage.Text = "The Classroom Profile has been created successfully.";
             }
+        }
+
+        protected void BackBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SuperuserDashboard.aspx");
         }
     }
 }

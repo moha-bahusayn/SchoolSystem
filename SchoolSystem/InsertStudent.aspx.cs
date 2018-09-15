@@ -3,7 +3,7 @@ using System;
 
 namespace SchoolSystem
 {
-    public partial class tesetInsertStudent : System.Web.UI.Page
+    public partial class InsertStudent : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +21,17 @@ namespace SchoolSystem
 
                 db.Students.Add(stud);
                 db.SaveChanges();
+                lbltable_fName.Text = stud.FirstName;
+                lbltable_lName.Text = stud.LastName;
+                lbltable_email.Text = stud.EmailAddress;
+                lbltable_mobile.Text = stud.MobileNumber;
+                CreationMesssage.Text = "The Student Profile has been created successfully.";
             }
+        }
+
+        protected void BackBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SuperuserDashboard.aspx");
         }
     }
 }

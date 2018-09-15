@@ -10,60 +10,87 @@
 namespace SchoolSystem {
     
     
-    public partial class testSearchStudent {
+    public partial class testInsertSubject {
         
         /// <summary>
-        /// QueryBox control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox QueryBox;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// byId_rdb control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton byId_rdb;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
-        /// byFname_rdb control.
+        /// Instructor_ddl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton byFname_rdb;
+        protected global::System.Web.UI.WebControls.DropDownList Instructor_ddl;
         
         /// <summary>
-        /// byLname_rdb control.
+        /// InstructorSqlDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton byLname_rdb;
+        protected global::System.Web.UI.WebControls.SqlDataSource InstructorSqlDataSource;
         
         /// <summary>
-        /// SubmitBtn control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SubmitBtn;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
         
         /// <summary>
-        /// StudentGridView control.
+        /// BackBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView StudentGridView;
+        protected global::System.Web.UI.WebControls.Button BackBtn;
+        
+        /// <summary>
+        /// CreationMesssage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CreationMesssage;
+        
+        /// <summary>
+        /// lbltable_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltable_name;
+        
+        /// <summary>
+        /// lbltable_iName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltable_iName;
     }
 }

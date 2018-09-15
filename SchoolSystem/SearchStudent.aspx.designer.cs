@@ -10,52 +10,61 @@
 namespace SchoolSystem {
     
     
-    public partial class testViewStudent {
+    public partial class testSearchStudent {
         
         /// <summary>
-        /// View_txt control.
+        /// QueryBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox View_txt;
+        protected global::System.Web.UI.WebControls.TextBox QueryBox;
         
         /// <summary>
-        /// ViewBtn control.
+        /// lblExceptionsMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ViewBtn;
+        protected global::System.Web.UI.WebControls.Label lblExceptionsMsg;
         
         /// <summary>
-        /// Update_txt control.
+        /// byId_rdb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Update_txt;
+        protected global::System.Web.UI.WebControls.RadioButton byId_rdb;
         
         /// <summary>
-        /// UpdateBtn control.
+        /// byFname_rdb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpdateBtn;
+        protected global::System.Web.UI.WebControls.RadioButton byFname_rdb;
         
         /// <summary>
-        /// lblFirstName control.
+        /// byLname_rdb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFirstName;
+        protected global::System.Web.UI.WebControls.RadioButton byLname_rdb;
+        
+        /// <summary>
+        /// SubmitBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SubmitBtn;
         
         /// <summary>
         /// StudentGridView control.
@@ -67,12 +76,12 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.GridView StudentGridView;
         
         /// <summary>
-        /// DeleteBtn control.
+        /// BackBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DeleteBtn;
+        protected global::System.Web.UI.WebControls.Button BackBtn;
     }
 }

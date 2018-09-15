@@ -20,8 +20,17 @@ namespace SchoolSystem
                 instruct.EmailAddress = txtEmail.Text;
 
                 db.Instructors.Add(instruct);
-                db.SaveChanges();
+                db.SaveChanges(); lbltable_fName.Text = instruct.FirstName;
+                lbltable_lName.Text = instruct.LastName;
+                lbltable_email.Text = instruct.EmailAddress;
+                lbltable_mobile.Text = instruct.MobileNumber;
+                CreationMesssage.Text = "The Instructor Profile has been created successfully.";
             }
+        }
+
+        protected void BackBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SuperuserDashboard.aspx");
         }
     }
 }

@@ -1,0 +1,11 @@
+﻿              TODO :
+			  
+			  2- add the enum schdules for the subject model and database [ Requires Delete any existing database.]
+			  
+			  3- In view student page, and view classroom page, you can assign students to classrooms, and vice versa.
+
+			  4- In view student page, and view subject page, you can assign students to subjects, and vice versa.
+
+			  5- Update function to all models. [in view pages]. [ try catch exceptions.]
+             
+			 6- Global file, Initializer.

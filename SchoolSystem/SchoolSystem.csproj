@@ -122,6 +122,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ErrorPage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -141,6 +142,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\sweetalert-dev.js" />
+    <Content Include="Scripts\sweetalert.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -163,12 +166,16 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="testInsertClassroom.aspx" />
-    <Content Include="testInsertInstructor.aspx" />
-    <Content Include="testInsertStudent.aspx" />
-    <Content Include="testInsertSubject.aspx" />
-    <Content Include="testSearchStudent.aspx" />
-    <Content Include="testViewStudent.aspx" />
+    <Content Include="Styles\sweetalert.css" />
+    <Content Include="InsertClassroom.aspx" />
+    <Content Include="InsertInstructor.aspx" />
+    <Content Include="InsertStudent.aspx" />
+    <Content Include="InsertSubject.aspx" />
+    <Content Include="SearchStudent.aspx" />
+    <Content Include="SuperuserDashboard.aspx" />
+    <Content Include="ViewAllStudents.aspx" />
+    <Content Include="ViewStudent.aspx" />
+    <Content Include="TODO.txt" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -200,12 +207,20 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Classroom.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\SchoolDBContext.cs" />
+    <Compile Include="Models\SchoolDBInitializer.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -223,47 +238,61 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="testInsertClassroom.aspx.cs">
-      <DependentUpon>testInsertClassroom.aspx</DependentUpon>
+    <Compile Include="InsertClassroom.aspx.cs">
+      <DependentUpon>InsertClassroom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="testInsertClassroom.aspx.designer.cs">
-      <DependentUpon>testInsertClassroom.aspx</DependentUpon>
+    <Compile Include="InsertClassroom.aspx.designer.cs">
+      <DependentUpon>InsertClassroom.aspx</DependentUpon>
     </Compile>
-    <Compile Include="testInsertInstructor.aspx.cs">
-      <DependentUpon>testInsertInstructor.aspx</DependentUpon>
+    <Compile Include="InsertInstructor.aspx.cs">
+      <DependentUpon>InsertInstructor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="testInsertInstructor.aspx.designer.cs">
-      <DependentUpon>testInsertInstructor.aspx</DependentUpon>
+    <Compile Include="InsertInstructor.aspx.designer.cs">
+      <DependentUpon>InsertInstructor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="testInsertStudent.aspx.cs">
-      <DependentUpon>testInsertStudent.aspx</DependentUpon>
+    <Compile Include="InsertStudent.aspx.cs">
+      <DependentUpon>InsertStudent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="testInsertStudent.aspx.designer.cs">
-      <DependentUpon>testInsertStudent.aspx</DependentUpon>
+    <Compile Include="InsertStudent.aspx.designer.cs">
+      <DependentUpon>InsertStudent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="testInsertSubject.aspx.cs">
-      <DependentUpon>testInsertSubject.aspx</DependentUpon>
+    <Compile Include="InsertSubject.aspx.cs">
+      <DependentUpon>InsertSubject.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="testInsertSubject.aspx.designer.cs">
-      <DependentUpon>testInsertSubject.aspx</DependentUpon>
+    <Compile Include="InsertSubject.aspx.designer.cs">
+      <DependentUpon>InsertSubject.aspx</DependentUpon>
     </Compile>
-    <Compile Include="testSearchStudent.aspx.cs">
-      <DependentUpon>testSearchStudent.aspx</DependentUpon>
+    <Compile Include="SearchStudent.aspx.cs">
+      <DependentUpon>SearchStudent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="testSearchStudent.aspx.designer.cs">
-      <DependentUpon>testSearchStudent.aspx</DependentUpon>
+    <Compile Include="SearchStudent.aspx.designer.cs">
+      <DependentUpon>SearchStudent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="testViewStudent.aspx.cs">
-      <DependentUpon>testViewStudent.aspx</DependentUpon>
+    <Compile Include="SuperuserDashboard.aspx.cs">
+      <DependentUpon>SuperuserDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="testViewStudent.aspx.designer.cs">
-      <DependentUpon>testViewStudent.aspx</DependentUpon>
+    <Compile Include="SuperuserDashboard.aspx.designer.cs">
+      <DependentUpon>SuperuserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllStudents.aspx.cs">
+      <DependentUpon>ViewAllStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAllStudents.aspx.designer.cs">
+      <DependentUpon>ViewAllStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStudent.aspx.cs">
+      <DependentUpon>ViewStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStudent.aspx.designer.cs">
+      <DependentUpon>ViewStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -278,7 +307,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Web.Debug.config">

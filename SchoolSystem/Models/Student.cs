@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace SchoolSystem.Models
@@ -16,8 +17,11 @@ namespace SchoolSystem.Models
 
         public string MobileNumber { get; set; }
         public string EmailAddress { get; set; }
-        //public double GPA { get; set; }
-        //public DateTime? DateOfBirth { get; set; }
+        public string Hobbies { get; set; } //hobbies += ", "+txtNewhobby.text;
+
+        public double GPA { get; set; }
+        //public DateTime DateOfBirth { get; set; }
+        //public int Age { get => DateTime.Now.Year - DateOfBirth.Year; set { } }
 
         public ICollection<Subject> Subjects { get; set; }
         public Classroom Classroom { get; set; }
