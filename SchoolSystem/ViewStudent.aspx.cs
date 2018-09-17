@@ -32,15 +32,12 @@ namespace SchoolSystem
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
-                Student std = new Student(); //{ Classroom = {Id = std.Classroom.Id };
-                std = db.Students.Where(s => s.Id == selectedId).FirstOrDefault();
-                //var cid = std.Classroom.Id; // ERROR
+                Student std = db.Students.Include("Classroom").Where(s => s.Id == selectedId).FirstOrDefault();
 
-                //Classroom classroom = new Classroom();
-                //Classroom classroom = db.Classrooms.Where(c => c.Id == std.Classroom.Id).FirstOrDefault();
+                Classroom classroom = std.Classroom;
                 lbl_id.Text = std.Id.ToString();
 
-                //lbl_classroom.Text = classroom.Name;
+                lbl_classroom.Text = classroom.Name;
 
                 lbl_fName.Text = std.FirstName;
                 lbl_lName.Text = std.LastName;
@@ -90,5 +87,9 @@ namespace SchoolSystem
                 QueryMessage.Text = "The Student " + std.FirstName + " " + std.LastName + " is enrolled in the class " + std.Classroom.Name;
             }
         }
+
+        //protected void AddSubjectBtn_Click(object sender, EventArgs e)
+        //{
+        //}
     }
 }

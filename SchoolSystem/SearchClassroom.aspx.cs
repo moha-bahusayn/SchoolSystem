@@ -6,7 +6,7 @@ using System.Web.UI.WebControls;
 
 namespace SchoolSystem
 {
-    public partial class SearchStudent : System.Web.UI.Page
+    public partial class SearchClassroom : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,22 +21,22 @@ namespace SchoolSystem
                     try
                     {
                         int id = Int32.Parse(QueryBox.Text);
-                        var std = db.Students.Find(id);
+                        Classroom classroom = db.Classrooms.Find(id);
                         DataTable dt = new DataTable();
                         dt.Clear();
 
                         dt.Columns.Add("ID");
-                        dt.Columns.Add("First Name");
-                        dt.Columns.Add("Last Name");
+                        dt.Columns.Add("Name");
+                        dt.Columns.Add("Capacity");
 
                         DataRow dr = dt.NewRow();
-                        dr[0] = std.Id;
-                        dr[1] = std.FirstName;
-                        dr[2] = std.LastName;
+                        dr[0] = classroom.Id;
+                        dr[1] = classroom.Name;
+                        dr[2] = classroom.Capacity.ToString();
                         dt.Rows.Add(dr);
 
-                        StudentGridView.DataSource = dt;
-                        StudentGridView.DataBind();
+                        ClassroomGridView.DataSource = dt;
+                        ClassroomGridView.DataBind();
                     }
                     catch (NullReferenceException)
                     {
@@ -47,29 +47,29 @@ namespace SchoolSystem
                         lblExceptionsMsg.Text = "Unknown Error, Please re-submit your inquiry. Exception Message : " + ex.Message;
                     }
                 }
-                else if (byFname_rdb.Checked)
+                else if (byName_rdb.Checked)
                 {
                     try
                     {
-                        string firstName = QueryBox.Text;
-                        var studentList = db.Students.Where(s => s.FirstName.Contains(firstName)).ToList();
+                        string name = QueryBox.Text;
+                        var classroomList = db.Classrooms.Where(c => c.Name.Contains(name)).ToList();
                         DataTable dt = new DataTable();
                         dt.Clear();
 
                         dt.Columns.Add("ID");
-                        dt.Columns.Add("First Name");
-                        dt.Columns.Add("Last Name");
+                        dt.Columns.Add("Name");
+                        dt.Columns.Add("Capacity");
 
-                        foreach (Student std in studentList)
+                        foreach (Classroom classroom in classroomList)
                         {
                             DataRow dr = dt.NewRow();
-                            dr[0] = std.Id;
-                            dr[1] = std.FirstName;
-                            dr[2] = std.LastName;
+                            dr[0] = classroom.Id;
+                            dr[1] = classroom.Name;
+                            dr[2] = classroom.Capacity.ToString();
                             dt.Rows.Add(dr);
                         }
-                        StudentGridView.DataSource = dt;
-                        StudentGridView.DataBind();
+                        ClassroomGridView.DataSource = dt;
+                        ClassroomGridView.DataBind();
                     }
                     catch (NullReferenceException)
                     {
@@ -80,29 +80,29 @@ namespace SchoolSystem
                         lblExceptionsMsg.Text = "Unknown Error, Please re-submit your inquiry. Exception Message : " + ex.Message;
                     }
                 }
-                else if (byLname_rdb.Checked)
+                else if (byCapacity_rdb.Checked)
                 {
                     try
                     {
-                        string lastName = QueryBox.Text;
-                        var studentList = db.Students.Where(s => s.LastName.Contains(lastName)).ToList();
+                        int cap = Int32.Parse(QueryBox.Text);
+                        var classroomList = db.Classrooms.Where(c => c.Capacity == cap).ToList();
                         DataTable dt = new DataTable();
                         dt.Clear();
 
                         dt.Columns.Add("ID");
-                        dt.Columns.Add("First Name");
-                        dt.Columns.Add("Last Name");
+                        dt.Columns.Add("Name");
+                        dt.Columns.Add("Capacity");
 
-                        foreach (Student std in studentList)
+                        foreach (Classroom classroom in classroomList)
                         {
                             DataRow dr = dt.NewRow();
-                            dr[0] = std.Id;
-                            dr[1] = std.FirstName;
-                            dr[2] = std.LastName;
+                            dr[0] = classroom.Id;
+                            dr[1] = classroom.Name;
+                            dr[2] = classroom.Capacity.ToString();
                             dt.Rows.Add(dr);
                         }
-                        StudentGridView.DataSource = dt;
-                        StudentGridView.DataBind();
+                        ClassroomGridView.DataSource = dt;
+                        ClassroomGridView.DataBind();
                     }
                     catch (NullReferenceException)
                     {
@@ -121,12 +121,12 @@ namespace SchoolSystem
             Response.Redirect("SuperuserDashboard.aspx");
         }
 
-        protected void StudentGridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void ClassroomGridView_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "select")
             {
-                string selectedId = StudentGridView.Rows[Convert.ToInt32(e.CommandArgument)].Cells[1].Text;
-                Response.Redirect("ViewStudent.aspx?selectedId=" + selectedId);
+                string selectedId = ClassroomGridView.Rows[Convert.ToInt32(e.CommandArgument)].Cells[1].Text;
+                Response.Redirect("ViewClassroom.aspx?selectedId=" + selectedId);
             }
         }
     }

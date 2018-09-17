@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 
 namespace SchoolSystem.Models
@@ -15,9 +16,7 @@ namespace SchoolSystem.Models
                 MobileNumber ="1122334455",
                 EmailAddress ="Alpha@example.com",
                 Hobbies ="Football, Running",
-                //DateOfBirth = new DateTime(2007, 12, 15),
-                //Classroom = {Id = 1},
-                //GPA = 4.00,
+                DateOfBirth = new DateTime(2007, 12, 31),
                 },
 
             new Student{
@@ -26,6 +25,7 @@ namespace SchoolSystem.Models
                 MobileNumber ="2233445566",
                 EmailAddress ="Charlie@example.com",
                 Hobbies="Futsal, Reading",
+                DateOfBirth = new DateTime(2007, 10, 15),
                 },
 
             new Student{
@@ -34,6 +34,7 @@ namespace SchoolSystem.Models
                 MobileNumber ="3344556677",
                 EmailAddress ="Echo@example.com",
                 Hobbies="Basketball, Swimming",
+                DateOfBirth = new DateTime(2007, 08, 10),
                 },
 
             new Student{
@@ -42,6 +43,7 @@ namespace SchoolSystem.Models
                 MobileNumber ="4455667788",
                 EmailAddress ="Gulf@example.com",
                 Hobbies="Handball, ESPORTS",
+                DateOfBirth = new DateTime(2007, 06, 05),
                 },
 
             new Student{
@@ -49,7 +51,9 @@ namespace SchoolSystem.Models
                 LastName ="Jeddah",
                 MobileNumber ="5566778899",
                 EmailAddress ="India@example.com",
-                Hobbies="Volleyball, Cycling"}
+                Hobbies="Volleyball, Cycling",
+                DateOfBirth = new DateTime(2007, 04, 01),
+            }
             };
 
             foreach (Student s in students)
@@ -123,12 +127,14 @@ namespace SchoolSystem.Models
                 Name = "Xray",
                 ScheduleDay = Subject.ScheduleDays.Sun,
                 },
-            //new Subject{
-            //    Name = "Yankee"
-            //    },
-            //new Subject{
-            //    Name = "Zulu"
-            //    }
+            new Subject{
+                Name = "Yankee",
+                ScheduleDay = Subject.ScheduleDays.Tue,
+                },
+            new Subject{
+                Name = "Zulu",
+                ScheduleDay = Subject.ScheduleDays.Thu,
+                }
             };
 
             foreach (Subject subj in subjects)

@@ -11,22 +11,6 @@ namespace SchoolSystem.Models
         [Required]
         public string Name { get; set; }
 
-        //[Required]
-        //public virtual int ScheduleDayId
-        //{
-        //    get
-        //    {
-        //        return (int)this.ScheduleDay;
-        //    }
-        //    set
-        //    {
-        //        ScheduleDay = (ScheduleDays)value;
-        //    }
-        //}
-
-        //[EnumDataType(typeof(ScheduleDays))]
-        //public ScheduleDays ScheduleDay { get; set; }
-
         public enum ScheduleDays { Sun, Mon, Tue, Wed, Thu };
 
         public ScheduleDays ScheduleDay { get; set; }

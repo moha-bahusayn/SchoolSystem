@@ -6,7 +6,7 @@ using System.Web.UI.WebControls;
 
 namespace SchoolSystem
 {
-    public partial class SearchStudent : System.Web.UI.Page
+    public partial class SearchInstructor : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +21,7 @@ namespace SchoolSystem
                     try
                     {
                         int id = Int32.Parse(QueryBox.Text);
-                        var std = db.Students.Find(id);
+                        Instructor instructor = db.Instructors.Find(id);
                         DataTable dt = new DataTable();
                         dt.Clear();
 
@@ -30,13 +30,13 @@ namespace SchoolSystem
                         dt.Columns.Add("Last Name");
 
                         DataRow dr = dt.NewRow();
-                        dr[0] = std.Id;
-                        dr[1] = std.FirstName;
-                        dr[2] = std.LastName;
+                        dr[0] = instructor.Id;
+                        dr[1] = instructor.FirstName;
+                        dr[2] = instructor.LastName;
                         dt.Rows.Add(dr);
 
-                        StudentGridView.DataSource = dt;
-                        StudentGridView.DataBind();
+                        InstructorGridView.DataSource = dt;
+                        InstructorGridView.DataBind();
                     }
                     catch (NullReferenceException)
                     {
@@ -52,7 +52,7 @@ namespace SchoolSystem
                     try
                     {
                         string firstName = QueryBox.Text;
-                        var studentList = db.Students.Where(s => s.FirstName.Contains(firstName)).ToList();
+                        var instructorList = db.Instructors.Where(i => i.FirstName.Contains(firstName)).ToList();
                         DataTable dt = new DataTable();
                         dt.Clear();
 
@@ -60,16 +60,16 @@ namespace SchoolSystem
                         dt.Columns.Add("First Name");
                         dt.Columns.Add("Last Name");
 
-                        foreach (Student std in studentList)
+                        foreach (Instructor instructor in instructorList)
                         {
                             DataRow dr = dt.NewRow();
-                            dr[0] = std.Id;
-                            dr[1] = std.FirstName;
-                            dr[2] = std.LastName;
+                            dr[0] = instructor.Id;
+                            dr[1] = instructor.FirstName;
+                            dr[2] = instructor.LastName;
                             dt.Rows.Add(dr);
                         }
-                        StudentGridView.DataSource = dt;
-                        StudentGridView.DataBind();
+                        InstructorGridView.DataSource = dt;
+                        InstructorGridView.DataBind();
                     }
                     catch (NullReferenceException)
                     {
@@ -85,7 +85,7 @@ namespace SchoolSystem
                     try
                     {
                         string lastName = QueryBox.Text;
-                        var studentList = db.Students.Where(s => s.LastName.Contains(lastName)).ToList();
+                        var instructorList = db.Instructors.Where(i => i.LastName.Contains(lastName)).ToList();
                         DataTable dt = new DataTable();
                         dt.Clear();
 
@@ -93,16 +93,16 @@ namespace SchoolSystem
                         dt.Columns.Add("First Name");
                         dt.Columns.Add("Last Name");
 
-                        foreach (Student std in studentList)
+                        foreach (Instructor instructor in instructorList)
                         {
                             DataRow dr = dt.NewRow();
-                            dr[0] = std.Id;
-                            dr[1] = std.FirstName;
-                            dr[2] = std.LastName;
+                            dr[0] = instructor.Id;
+                            dr[1] = instructor.FirstName;
+                            dr[2] = instructor.LastName;
                             dt.Rows.Add(dr);
                         }
-                        StudentGridView.DataSource = dt;
-                        StudentGridView.DataBind();
+                        InstructorGridView.DataSource = dt;
+                        InstructorGridView.DataBind();
                     }
                     catch (NullReferenceException)
                     {
@@ -121,12 +121,12 @@ namespace SchoolSystem
             Response.Redirect("SuperuserDashboard.aspx");
         }
 
-        protected void StudentGridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void InstructorGridView_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "select")
             {
-                string selectedId = StudentGridView.Rows[Convert.ToInt32(e.CommandArgument)].Cells[1].Text;
-                Response.Redirect("ViewStudent.aspx?selectedId=" + selectedId);
+                string selectedId = InstructorGridView.Rows[Convert.ToInt32(e.CommandArgument)].Cells[1].Text;
+                Response.Redirect("ViewInstructor.aspx?selectedId=" + selectedId);
             }
         }
     }

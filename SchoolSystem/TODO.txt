@@ -1,5 +1,5 @@
 ﻿              TODO :
-			  1- Add search pages for instructor, classroom, and subject.
+			  
 			  2- in view instructor page, assign instructors to subjects.
 			  3- in view student page, assign students to classrooms, and subjects.
 			  4- in view subject page, assign subjects to students, and instructors.
@@ -9,3 +9,7 @@
 			  8- Add hobbies and classroom ID in new student page.
 			  9- add birthdate and age columns to student table.
 			 10- create different levels of access the system ( Superuser, Student, Instructor).
+
+			 Activate enum in subject , add and display. [ drop down]
+			 add birthday, and display.
+			 activate jquery datepicker.

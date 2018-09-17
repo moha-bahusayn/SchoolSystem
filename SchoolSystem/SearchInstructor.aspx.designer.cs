@@ -10,7 +10,7 @@
 namespace SchoolSystem {
     
     
-    public partial class SearchStudent {
+    public partial class SearchInstructor {
         
         /// <summary>
         /// QueryBox control.
@@ -67,13 +67,13 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Button SubmitBtn;
         
         /// <summary>
-        /// StudentGridView control.
+        /// InstructorGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView StudentGridView;
+        protected global::System.Web.UI.WebControls.GridView InstructorGridView;
         
         /// <summary>
         /// BackBtn control.

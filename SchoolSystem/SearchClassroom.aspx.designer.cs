@@ -10,7 +10,7 @@
 namespace SchoolSystem {
     
     
-    public partial class SearchStudent {
+    public partial class SearchClassroom {
         
         /// <summary>
         /// QueryBox control.
@@ -40,22 +40,22 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.RadioButton byId_rdb;
         
         /// <summary>
-        /// byFname_rdb control.
+        /// byName_rdb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton byFname_rdb;
+        protected global::System.Web.UI.WebControls.RadioButton byName_rdb;
         
         /// <summary>
-        /// byLname_rdb control.
+        /// byCapacity_rdb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton byLname_rdb;
+        protected global::System.Web.UI.WebControls.RadioButton byCapacity_rdb;
         
         /// <summary>
         /// SubmitBtn control.
@@ -67,13 +67,13 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Button SubmitBtn;
         
         /// <summary>
-        /// StudentGridView control.
+        /// ClassroomGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView StudentGridView;
+        protected global::System.Web.UI.WebControls.GridView ClassroomGridView;
         
         /// <summary>
         /// BackBtn control.
