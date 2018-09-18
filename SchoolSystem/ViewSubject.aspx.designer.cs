@@ -31,6 +31,24 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Label lbl_name;
         
         /// <summary>
+        /// lbl_schedule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_schedule;
+        
+        /// <summary>
+        /// lbl_instructor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_instructor;
+        
+        /// <summary>
         /// DeleteBtn control.
         /// </summary>
         /// <remarks>

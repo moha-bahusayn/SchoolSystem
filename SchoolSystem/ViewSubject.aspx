@@ -14,6 +14,16 @@
             <td>
                 <asp:Label ID="lbl_name" runat="server" Text=""></asp:Label></td>
         </tr>
+        <tr>
+            <td>Schedule Day:</td>
+            <td>
+                <asp:Label ID="lbl_schedule" runat="server" Text=""></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Instructor:</td>
+            <td>
+                <asp:Label ID="lbl_instructor" runat="server" Text=""></asp:Label></td>
+        </tr>
     </table>
     <p>
         <asp:Button ID="DeleteBtn" class="btn btn-danger active" runat="server" Text="Delete" OnClick="DeleteBtn_Click" />

@@ -9,13 +9,6 @@ namespace SchoolSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
-             * Control the flow.
-             * Auto-hide = true for update button and delete button.
-             * after view button is clicked, the update and delete buttons are shown along with the label student name.
-             * the update and the delete functions should be working with the label student name, not the view txt box.
-             */
-
             try
             {
                 string qString = Request.QueryString["selectedId"];

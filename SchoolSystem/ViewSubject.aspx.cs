@@ -29,12 +29,15 @@ namespace SchoolSystem
         {
             using (SchoolDBContext db = new SchoolDBContext())
             {
-                Subject subject = new Subject();
-                subject = db.Subjects.Where(s => s.Id == selectedId).FirstOrDefault();
+                Subject subject = db.Subjects.Include("Instructor").Where(s => s.Id == selectedId).FirstOrDefault();
+
+                Instructor instructor = subject.Instructor;
 
                 lbl_id.Text = subject.Id.ToString();
 
                 lbl_name.Text = subject.Name;
+                lbl_schedule.Text = subject.ScheduleDay.ToString();
+                lbl_instructor.Text = instructor.FirstName + " " + instructor.LastName;
             }
         }
 

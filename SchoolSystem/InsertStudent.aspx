@@ -1,5 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InsertStudent.aspx.cs" Inherits="SchoolSystem.InsertStudent" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("#<%= datepicker.ClientID %>").datepicker({ dateFormat: 'dd/mm/yy' });
+
+        });
+
+        function pageLoad(sender, args) {
+
+            if (args.get_isPartialLoad()) {
+
+                $("#<%= datepicker.ClientID %>").datepicker({ dateFormat: 'dd/mm/yy' });
+
+            }
+
+        };
+    </script>
+
+    <%--<script>
+        $(function () {
+            $("#<%=datepicker.ClientID%>").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+    </script>--%>
+</asp:Content>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <br />
@@ -21,6 +51,10 @@
     <asp:Label ID="lblemail" runat="server" Text="Email Address"></asp:Label>
     <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
     <br />
+    <asp:Label ID="lbldob" runat="server" Text="Date Of Birth"></asp:Label>
+    <asp:TextBox ID="txtDob" runat="server"></asp:TextBox>
+
+    <asp:TextBox ID="datepicker" runat="server"></asp:TextBox>
 
     <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
 
@@ -44,6 +78,11 @@
             <td>Email:</td>
             <td>
                 <asp:Label ID="lbltable_email" runat="server" Text=""></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Date Of Birth:</td>
+            <td>
+                <asp:Label ID="lbltable_dob" runat="server" Text=""></asp:Label></td>
         </tr>
     </table>
 </asp:Content>

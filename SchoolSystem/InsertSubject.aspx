@@ -12,12 +12,16 @@
     <asp:DropDownList ID="Instructor_ddl" runat="server" DataSourceID="InstructorSqlDataSource" DataTextField="FirstName" DataValueField="FirstName">
     </asp:DropDownList>
     <asp:SqlDataSource ID="InstructorSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [FirstName], [LastName] FROM [Instructors]"></asp:SqlDataSource>
+    Schedule Date*:
+    <asp:DropDownList ID="Schedule_ddl" runat="server">
+        <asp:ListItem Value="0">Sunday</asp:ListItem>
+        <asp:ListItem Value="1">Monday</asp:ListItem>
+        <asp:ListItem Value="2">Tuesday</asp:ListItem>
+        <asp:ListItem Value="3">Wednesday</asp:ListItem>
+        <asp:ListItem Value="4">Thursday</asp:ListItem>
+    </asp:DropDownList>
     <br />
-
-    <%-- <asp:Label ID="LabelCode" runat="server" Text="Code *"></asp:Label>
-    <asp:TextBox ID="txtCode" runat="server"></asp:TextBox>
-    <br />--%>
-
+    <br />
     <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" /><asp:Button ID="BackBtn" runat="server" Text="Back To Dashboard" OnClick="BackBtn_Click" />
     <br />
     <asp:Label ID="CreationMesssage" runat="server" Text=""></asp:Label>
@@ -28,10 +32,15 @@
             <td>
                 <asp:Label ID="lbltable_name" runat="server" Text=""></asp:Label></td>
         </tr>
-
-        <td>Instructor:</td>
-        <td>
-            <asp:Label ID="lbltable_iName" runat="server" Text=""></asp:Label></td>
+        <tr>
+            <td>Instructor:</td>
+            <td>
+                <asp:Label ID="lbltable_instructor" runat="server" Text=""></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Schedule:</td>
+            <td>
+                <asp:Label ID="lbltable_schedule" runat="server" Text=""></asp:Label></td>
         </tr>
     </table>
 </asp:Content>

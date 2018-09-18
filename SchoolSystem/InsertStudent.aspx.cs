@@ -1,5 +1,6 @@
 ﻿using SchoolSystem.Models;
 using System;
+using System.Globalization;
 
 namespace SchoolSystem
 {
@@ -18,13 +19,18 @@ namespace SchoolSystem
                 stud.LastName = txtLName.Text;
                 stud.MobileNumber = txtMobile.Text;
                 stud.EmailAddress = txtEmail.Text;
-
+                CultureInfo provider = CultureInfo.InvariantCulture;
+                string format = "dd/MM/yyyy";
+                stud.DateOfBirth = DateTime.ParseExact(txtDob.Text, format, provider);
                 db.Students.Add(stud);
                 db.SaveChanges();
                 lbltable_fName.Text = stud.FirstName;
                 lbltable_lName.Text = stud.LastName;
                 lbltable_email.Text = stud.EmailAddress;
                 lbltable_mobile.Text = stud.MobileNumber;
+                string format_display = "dd MMM yyyy";
+                lbltable_dob.Text = stud.DateOfBirth.ToString(format_display, provider);
+                //lbltable_dob.Text = stud.DateOfBirth.ToShortDateString();
                 CreationMesssage.Text = "The Student Profile has been created successfully.";
             }
         }

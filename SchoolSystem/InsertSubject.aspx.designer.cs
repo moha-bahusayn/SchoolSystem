@@ -49,6 +49,15 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.SqlDataSource InstructorSqlDataSource;
         
         /// <summary>
+        /// Schedule_ddl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Schedule_ddl;
+        
+        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>
@@ -85,12 +94,21 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Label lbltable_name;
         
         /// <summary>
-        /// lbltable_iName control.
+        /// lbltable_instructor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltable_iName;
+        protected global::System.Web.UI.WebControls.Label lbltable_instructor;
+        
+        /// <summary>
+        /// lbltable_schedule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltable_schedule;
     }
 }

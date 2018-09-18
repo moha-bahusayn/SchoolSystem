@@ -10,6 +10,5 @@
 			  9- add birthdate and age columns to student table.
 			 10- create different levels of access the system ( Superuser, Student, Instructor).
 
-			 Activate enum in subject , add and display. [ drop down]
 			 add birthday, and display.
 			 activate jquery datepicker.
