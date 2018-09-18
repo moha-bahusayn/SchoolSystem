@@ -6,7 +6,11 @@
 
         $(function () {
 
-            $("#<%= datepicker.ClientID %>").datepicker({ dateFormat: 'dd/mm/yy' });
+            $("#<%= txtDob.ClientID %>").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd/mm/yy'
+            });
 
         });
 
@@ -14,7 +18,11 @@
 
             if (args.get_isPartialLoad()) {
 
-                $("#<%= datepicker.ClientID %>").datepicker({ dateFormat: 'dd/mm/yy' });
+                $("#<%= txtDob.ClientID %>").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd/mm/yy'
+            });
 
             }
 
@@ -54,7 +62,7 @@
     <asp:Label ID="lbldob" runat="server" Text="Date Of Birth"></asp:Label>
     <asp:TextBox ID="txtDob" runat="server"></asp:TextBox>
 
-    <asp:TextBox ID="datepicker" runat="server"></asp:TextBox>
+    <br />
 
     <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
 
