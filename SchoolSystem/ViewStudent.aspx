@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewStudent.aspx.cs" Inherits="SchoolSystem.ViewStudent" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="HeadScriptContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadContent" runat="server">
     <%--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         swal("Hello world!");

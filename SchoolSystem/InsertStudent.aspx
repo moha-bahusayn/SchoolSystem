@@ -61,6 +61,15 @@
     <br />
     <asp:Label ID="lbldob" runat="server" Text="Date Of Birth"></asp:Label>
     <asp:TextBox ID="txtDob" runat="server"></asp:TextBox>
+    <br />
+    <asp:Label ID="lblhobbies" runat="server" Text="Hobbies"></asp:Label>
+    <asp:TextBox ID="txtHobbies" runat="server"></asp:TextBox>
+    <br />
+
+    Classroom Name:
+    <asp:DropDownList ID="Classroom_ddl" runat="server" DataSourceID="ClassroomSqlDataSource" DataTextField="Name" DataValueField="Id">
+    </asp:DropDownList>
+    <asp:SqlDataSource ID="ClassroomSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [Name] FROM [Classrooms]"></asp:SqlDataSource>
 
     <br />
 
@@ -91,6 +100,9 @@
             <td>Date Of Birth:</td>
             <td>
                 <asp:Label ID="lbltable_dob" runat="server" Text=""></asp:Label></td>
+            <td>Classroom:</td>
+            <td>
+                <asp:Label ID="lbltable_classroom" runat="server" Text=""></asp:Label></td>
         </tr>
     </table>
 </asp:Content>

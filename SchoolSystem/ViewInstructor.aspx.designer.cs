@@ -58,6 +58,33 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Label lbl_email;
         
         /// <summary>
+        /// Subject_ddl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Subject_ddl;
+        
+        /// <summary>
+        /// AddsubjectBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddsubjectBtn;
+        
+        /// <summary>
+        /// SubjectSqlDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SubjectSqlDataSource;
+        
+        /// <summary>
         /// DeleteBtn control.
         /// </summary>
         /// <remarks>

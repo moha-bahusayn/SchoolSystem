@@ -1,14 +1,9 @@
 ﻿              TODO :
 			  
-			  2- in view instructor page, assign instructors to subjects.
-			  3- in view student page, assign students to classrooms, and subjects.
-			  4- in view subject page, assign subjects to students, and instructors.
-			  5- Update function to all models. [in view pages]. [ try catch exceptions.]
-			  6- Global file, Initializer.
-			  7- Add schedule selection in new subject page.
-			  8- Add hobbies and classroom ID in new student page.
-			  9- add birthdate and age columns to student table.
-			 10- create different levels of access the system ( Superuser, Student, Instructor).
-
-			 add birthday, and display.
-			 activate jquery datepicker.
+			  - in view instructor page, assign instructors to subjects.
+			  - in view student page, assign students to subjects.
+			  - in view subject page, assign subjects to students, and instructors.
+			  - Update function to all models. [in view pages]. [ try catch exceptions.]
+			  - Add hobbies and classroom ID in new student page.
+			  - create different levels of access the system ( Superuser, Student, Instructor).
+			  - in view student, if Classroom is not null, change (Add to class) to (Change classroom for this student[update]).

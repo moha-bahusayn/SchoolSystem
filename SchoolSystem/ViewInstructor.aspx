@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewInstructor.aspx.cs" Inherits="SchoolSystem.ViewInstructor" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadScriptContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table class="table table-striped">
@@ -31,13 +31,13 @@
         </tr>
     </table>
 
-    <%-- <p>
+     <p>
         Assign Instructor to Subject :
         <asp:DropDownList ID="Subject_ddl" runat="server" DataSourceID="SubjectSqlDataSource" DataTextField="Name" DataValueField="Name">
         </asp:DropDownList>
         <asp:Button ID="AddsubjectBtn" runat="server" Text="Assign to Subject." OnClick="AddSubjectBtn_Click" />
         <asp:SqlDataSource ID="SubjectSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [Name], [ScheduleDay] FROM [Subjects]"></asp:SqlDataSource>
-    </p>--%>
+    </p>
     <p>
         <asp:Button ID="DeleteBtn" class="btn btn-danger active" runat="server" Text="Delete" OnClick="DeleteBtn_Click" />
     </p>
