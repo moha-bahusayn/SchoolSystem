@@ -121,6 +121,15 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.TextBox txtHobbies;
         
         /// <summary>
+        /// lblclassroomName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblclassroomName;
+        
+        /// <summary>
         /// Classroom_ddl control.
         /// </summary>
         /// <remarks>
@@ -166,6 +175,15 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Label CreationMesssage;
         
         /// <summary>
+        /// infoTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table infoTable;
+        
+        /// <summary>
         /// lbltable_fName control.
         /// </summary>
         /// <remarks>
@@ -209,6 +227,15 @@ namespace SchoolSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltable_dob;
+        
+        /// <summary>
+        /// lbltable_hobbies control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltable_hobbies;
         
         /// <summary>
         /// lbltable_classroom control.

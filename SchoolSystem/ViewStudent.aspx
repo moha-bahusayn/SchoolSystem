@@ -35,8 +35,7 @@
         </tr>
     </table>
 
-    <p>
-        Add Student to Classroom :
+        <asp:Label ID="lbl_addClass" runat="server" Text="Add Student to Classroom :"></asp:Label>
         <asp:DropDownList ID="Classroom_ddl" runat="server" DataSourceID="ClassroomSqlDataSource" DataTextField="Name" DataValueField="Name">
         </asp:DropDownList>
         <asp:Button ID="AddClassBtn" runat="server" Text="Add to Class." OnClick="AddClassBtn_Click" />

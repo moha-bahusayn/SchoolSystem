@@ -65,8 +65,8 @@
     <asp:Label ID="lblhobbies" runat="server" Text="Hobbies"></asp:Label>
     <asp:TextBox ID="txtHobbies" runat="server"></asp:TextBox>
     <br />
+        <asp:Label ID="lblclassroomName" runat="server" Text="    Classroom Name:"></asp:Label>
 
-    Classroom Name:
     <asp:DropDownList ID="Classroom_ddl" runat="server" DataSourceID="ClassroomSqlDataSource" DataTextField="Name" DataValueField="Id">
     </asp:DropDownList>
     <asp:SqlDataSource ID="ClassroomSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [Name] FROM [Classrooms]"></asp:SqlDataSource>
@@ -79,30 +79,42 @@
     <br />
     <asp:Label ID="CreationMesssage" runat="server" Text=""></asp:Label>
     <br />
-    <table class="table table-striped">
-        <tr>
-            <td>First Name:</td>
-            <td>
-                <asp:Label ID="lbltable_fName" runat="server" Text=""></asp:Label></td>
-            <td>Last Name:</td>
-            <td>
-                <asp:Label ID="lbltable_lName" runat="server" Text=""></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Mobile:</td>
-            <td>
-                <asp:Label ID="lbltable_mobile" runat="server" Text=""></asp:Label></td>
-            <td>Email:</td>
-            <td>
-                <asp:Label ID="lbltable_email" runat="server" Text=""></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Date Of Birth:</td>
-            <td>
-                <asp:Label ID="lbltable_dob" runat="server" Text=""></asp:Label></td>
-            <td>Classroom:</td>
-            <td>
-                <asp:Label ID="lbltable_classroom" runat="server" Text=""></asp:Label></td>
-        </tr>
-    </table>
+    <asp:table ID="infoTable" runat="server" class="table table-striped">
+        <asp:TableRow>
+            <asp:TableCell>First Name:</asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="lbltable_fName" runat="server" Text=""></asp:Label></asp:TableCell>
+            </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>Last Name:</asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="lbltable_lName" runat="server" Text=""></asp:Label></asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>Mobile:</asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="lbltable_mobile" runat="server" Text=""></asp:Label></asp:TableCell>
+       </asp:TableRow>
+        <asp:TableRow>     
+            <asp:TableCell>Email:</asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="lbltable_email" runat="server" Text=""></asp:Label></asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>Date Of Birth:</asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="lbltable_dob" runat="server" Text=""></asp:Label></asp:TableCell>
+            </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>Hobbies:</asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="lbltable_hobbies" runat="server" Text=""></asp:Label>
+            </asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>Classroom:</asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="lbltable_classroom" runat="server" Text=""></asp:Label></asp:TableCell>
+        </asp:TableRow>
+    </asp:table>
 </asp:Content>
