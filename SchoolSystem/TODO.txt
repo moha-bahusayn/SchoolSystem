@@ -1,6 +1,5 @@
 ﻿              TODO :
-			  - in view student page, assign students to subjects.
-			  - in view subject page, only show the enrolled students and the assigned instructor.
+			  
 			  - Increase sample data in the DBinitializer.
 			  - count capacity.
 			  - intialize Collections, and Navigation Properties.

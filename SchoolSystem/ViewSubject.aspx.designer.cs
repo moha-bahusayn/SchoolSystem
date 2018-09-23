@@ -85,6 +85,60 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.SqlDataSource InstructorSqlDataSource;
         
         /// <summary>
+        /// SubStdGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView SubStdGridView;
+        
+        /// <summary>
+        /// lbl_AddStudent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_AddStudent;
+        
+        /// <summary>
+        /// Student_ddl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Student_ddl;
+        
+        /// <summary>
+        /// AddStudentBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddStudentBtn;
+        
+        /// <summary>
+        /// StudentSqlDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource StudentSqlDataSource;
+        
+        /// <summary>
+        /// SubStdsSqlDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SubStdsSqlDataSource;
+        
+        /// <summary>
         /// DeleteBtn control.
         /// </summary>
         /// <remarks>

@@ -88,5 +88,25 @@ namespace SchoolSystem
                                     + " is now the assigned instructor for the subject: " + subject.Name;
             }
         }
+
+        protected void AddStudentBtn_Click(object sender, EventArgs e)
+        {
+            int selectedId = Int32.Parse(lbl_id.Text);
+            AddAStudent(selectedId);
+        }
+
+        private void AddAStudent(int selectedId)
+        {
+            using (SchoolDBContext db = new SchoolDBContext())
+            {
+                Subject subject = new Subject();
+                subject = db.Subjects.Include("Students").Where(s => s.Id == selectedId).FirstOrDefault();
+                Student student = db.Students.Where(s => s.Id.ToString() == Student_ddl.SelectedValue).FirstOrDefault();
+                subject.Students.Add(student);
+                //show data in SubStdGridView;
+                db.SaveChanges();
+                QueryMessage.Text = "The Student is enrolled in the subject.";
+            }
+        }
     }
 }

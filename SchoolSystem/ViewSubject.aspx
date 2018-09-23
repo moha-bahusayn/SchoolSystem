@@ -30,6 +30,25 @@
     </asp:DropDownList>
     <asp:Button ID="AssignInstructorBtn" runat="server" Text="Assign" OnClick="AssignInstructorBtn_Click" />
     <asp:SqlDataSource ID="InstructorSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [FirstName], [LastName] FROM [Instructors]"></asp:SqlDataSource>
+
+    <asp:GridView ID="SubStdGridView" runat="server" DataSourceID="SubStdsSqlDataSource" AutoGenerateColumns="False" DataKeyNames="Subject_Id,Student_Id">
+        <Columns>
+            <asp:BoundField DataField="Subject_Id" HeaderText="Subject_Id" ReadOnly="True" SortExpression="Subject_Id" />
+            <asp:BoundField DataField="Student_Id" HeaderText="Student_Id" ReadOnly="True" SortExpression="Student_Id" />
+        </Columns>
+    </asp:GridView>
+    <br />
+
+    <asp:Label ID="lbl_AddStudent" runat="server" Text="Add a Student to this Subject :"></asp:Label>
+    <asp:DropDownList ID="Student_ddl" runat="server" DataSourceID="StudentSqlDataSource" DataTextField="FirstName" DataValueField="Id">
+    </asp:DropDownList>
+    <asp:Button ID="AddStudentBtn" runat="server" Text="Add" OnClick="AddStudentBtn_Click" />
+    <asp:SqlDataSource ID="StudentSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [FirstName], [LastName] FROM [Students]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SubStdsSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT * FROM [SubjectStudents] WHERE ([Subject_Id] = @Subject_Id)">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="lbl_id" Name="Subject_Id" PropertyName="Text" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
     <p>
         <asp:Button ID="DeleteBtn" class="btn btn-danger active" runat="server" Text="Delete" OnClick="DeleteBtn_Click" />
     </p>
