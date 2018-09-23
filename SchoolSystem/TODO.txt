@@ -1,7 +1,4 @@
 ﻿              TODO :
-			  
-			  - Increase sample data in the DBinitializer.
-			  - count capacity.
-			  - intialize Collections, and Navigation Properties.
-			  - Update function to all models. [in single-view pages]. [try catch exceptions.]
+			  - Solve the issue of not showing the initialized data when view all (model) after app first launch.
+			  - count Classroom Capacity[show stats only in view single classroom page].
 			  - create different levels of access the system (Superuser, Student, Instructor).

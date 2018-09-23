@@ -35,10 +35,10 @@
         </tr>
     </table>
 
-    <asp:Label ID="lbl_addClass" runat="server" Text="Add Student to Classroom :"></asp:Label>
+    <asp:Label ID="lbl_class" runat="server" Text="Classrooms :"></asp:Label>
     <asp:DropDownList ID="Classroom_ddl" runat="server" DataSourceID="ClassroomSqlDataSource" DataTextField="Name" DataValueField="Name">
     </asp:DropDownList>
-    <asp:Button ID="AddClassBtn" runat="server" Text="Add to Class." OnClick="AddClassBtn_Click" />
+    <asp:Button ID="ActionClassBtn" runat="server" Text="" OnClick="ActionClassBtn_Click" />
     <asp:SqlDataSource ID="ClassroomSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [Name], [Capacity] FROM [Classrooms]"></asp:SqlDataSource>
     <p>
         <asp:Button ID="DeleteBtn" class="btn btn-danger active" runat="server" Text="Delete" OnClick="DeleteBtn_Click" />

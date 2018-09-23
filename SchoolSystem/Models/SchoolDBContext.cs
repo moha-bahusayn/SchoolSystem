@@ -4,7 +4,7 @@ namespace SchoolSystem.Models
 {
     public class SchoolDBContext : DbContext
     {
-        public SchoolDBContext() : base("name=DBConnect")
+        public SchoolDBContext() : base("SchoolDB")
         {
             Database.SetInitializer(new SchoolDBInitializer());
             //Database.SetInitializer<SchoolDBContext>(new CreateDatabaseIfNotExists<SchoolDBContext>());

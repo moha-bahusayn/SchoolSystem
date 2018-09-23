@@ -67,13 +67,13 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Label lbl_email;
         
         /// <summary>
-        /// lbl_addClass control.
+        /// lbl_class control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_addClass;
+        protected global::System.Web.UI.WebControls.Label lbl_class;
         
         /// <summary>
         /// Classroom_ddl control.
@@ -85,13 +85,13 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.DropDownList Classroom_ddl;
         
         /// <summary>
-        /// AddClassBtn control.
+        /// ActionClassBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddClassBtn;
+        protected global::System.Web.UI.WebControls.Button ActionClassBtn;
         
         /// <summary>
         /// ClassroomSqlDataSource control.

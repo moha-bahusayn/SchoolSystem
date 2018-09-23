@@ -31,15 +31,14 @@ namespace SchoolSystem
 
                 lbl_id.Text = subject.Id.ToString();
                 lbl_name.Text = subject.Name;
+                lbl_schedule.Text = subject.ScheduleDay.ToString();
                 try
                 {
                     lbl_instructor.Text = instructor.FirstName + " " + instructor.LastName;
-                    lbl_schedule.Text = subject.ScheduleDay.ToString();
                 }
                 catch (NullReferenceException)
                 {
                     lbl_instructor.Text = "";
-                    lbl_schedule.Text = "";
                 }
             }
         }
@@ -78,13 +77,11 @@ namespace SchoolSystem
             using (SchoolDBContext db = new SchoolDBContext())
             {
                 Subject subject = db.Subjects.Include("Instructor").Where(s => s.Id == selectedId).FirstOrDefault();
-                Instructor instructor = subject.Instructor;
-
-                subject.Instructor = db.Instructors.Where(i => i.FirstName == Instructor_ddl.Text).FirstOrDefault();
+                subject.Instructor = db.Instructors.Where(i => i.Id.ToString() == Instructor_ddl.SelectedValue).FirstOrDefault();
 
                 db.SaveChanges();
-                lbl_instructor.Text = instructor.FirstName + " " + instructor.LastName;
-                QueryMessage.Text = "The Instructor " + instructor.FirstName + " " + instructor.LastName
+                lbl_instructor.Text = subject.Instructor.FirstName + " " + subject.Instructor.LastName;
+                QueryMessage.Text = "The Instructor " + subject.Instructor.FirstName + " " + subject.Instructor.LastName
                                     + " is now the assigned instructor for the subject: " + subject.Name;
             }
         }

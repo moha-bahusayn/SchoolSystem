@@ -32,16 +32,12 @@ namespace SchoolSystem
                 try
                 {
                     lbl_classroom.Text = classroom.Name;
-                    Classroom_ddl.Visible = false;
-                    AddClassBtn.Visible = false;
-                    lbl_addClass.Visible = false;
+                    ActionClassBtn.Text = "Update!";
                 }
                 catch (NullReferenceException)
                 {
-                    lbl_classroom.Text = "";
-                    Classroom_ddl.Visible = true;
-                    AddClassBtn.Visible = true;
-                    lbl_addClass.Visible = true;
+                    lbl_classroom.Text = null;
+                    ActionClassBtn.Text = "Add!";
                 }
 
                 lbl_fName.Text = std.FirstName;
@@ -74,7 +70,7 @@ namespace SchoolSystem
             }
         }
 
-        protected void AddClassBtn_Click(object sender, EventArgs e)
+        protected void ActionClassBtn_Click(object sender, EventArgs e)
         {
             int selectedId = Int32.Parse(lbl_id.Text);
             AddClass(selectedId);
@@ -91,6 +87,7 @@ namespace SchoolSystem
                 db.SaveChanges();
                 lbl_classroom.Text = std.Classroom.Name;
                 QueryMessage.Text = "The Student " + std.FirstName + " " + std.LastName + " is enrolled in the class " + std.Classroom.Name;
+                ActionClassBtn.Text = "Update!";
             }
         }
 
