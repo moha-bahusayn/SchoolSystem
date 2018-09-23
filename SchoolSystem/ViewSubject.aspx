@@ -25,6 +25,11 @@
                 <asp:Label ID="lbl_instructor" runat="server" Text=""></asp:Label></td>
         </tr>
     </table>
+    <asp:Label ID="lbl_assignInstructor" runat="server" Text="Assign an Instructor to this Subject :"></asp:Label>
+    <asp:DropDownList ID="Instructor_ddl" runat="server" DataSourceID="InstructorSqlDataSource" DataTextField="FirstName" DataValueField="Id">
+    </asp:DropDownList>
+    <asp:Button ID="AssignInstructorBtn" runat="server" Text="Assign" OnClick="AssignInstructorBtn_Click" />
+    <asp:SqlDataSource ID="InstructorSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [FirstName], [LastName] FROM [Instructors]"></asp:SqlDataSource>
     <p>
         <asp:Button ID="DeleteBtn" class="btn btn-danger active" runat="server" Text="Delete" OnClick="DeleteBtn_Click" />
     </p>
@@ -33,8 +38,5 @@
     <br />
     <p>
         <asp:Button ID="BackBtn" class="btn btn-default active" runat="server" Text="Back To Dashboard" OnClick="BackBtn_Click" />
-    </p>
-    <p>
-        &nbsp;
     </p>
 </asp:Content>

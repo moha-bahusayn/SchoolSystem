@@ -1,7 +1,8 @@
 ﻿              TODO :
-			  - in view instructor page, assign instructors to subjects.
 			  - in view student page, assign students to subjects.
 			  - in view subject page, only show the enrolled students and the assigned instructor.
-			  - Update function to all models. [in single-view pages]. [ try catch exceptions.]
-			  - create different levels of access the system ( Superuser, Student, Instructor).
-			  
+			  - Increase sample data in the DBinitializer.
+			  - count capacity.
+			  - intialize Collections, and Navigation Properties.
+			  - Update function to all models. [in single-view pages]. [try catch exceptions.]
+			  - create different levels of access the system (Superuser, Student, Instructor).

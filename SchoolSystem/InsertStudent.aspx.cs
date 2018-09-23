@@ -28,7 +28,7 @@ namespace SchoolSystem
                 stud.Classroom = classroom;
                 CultureInfo provider = CultureInfo.InvariantCulture;
                 string format = "dd/MM/yyyy";
-                if(!string.IsNullOrEmpty(txtDob.Text))
+                if (!string.IsNullOrEmpty(txtDob.Text))
                 {
                     stud.DateOfBirth = DateTime.ParseExact(txtDob.Text, format, provider);
                 }

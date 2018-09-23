@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using SchoolSystem.Models;
+using System;
 using System.Data;
-using SchoolSystem.Models;
+using System.Linq;
 
 namespace SchoolSystem
 {
@@ -34,10 +30,17 @@ namespace SchoolSystem
                 Instructor instructor = subject.Instructor;
 
                 lbl_id.Text = subject.Id.ToString();
-
                 lbl_name.Text = subject.Name;
-                lbl_schedule.Text = subject.ScheduleDay.ToString();
-                lbl_instructor.Text = instructor.FirstName + " " + instructor.LastName;
+                try
+                {
+                    lbl_instructor.Text = instructor.FirstName + " " + instructor.LastName;
+                    lbl_schedule.Text = subject.ScheduleDay.ToString();
+                }
+                catch (NullReferenceException)
+                {
+                    lbl_instructor.Text = "";
+                    lbl_schedule.Text = "";
+                }
             }
         }
 
@@ -61,6 +64,28 @@ namespace SchoolSystem
                 db.Subjects.Remove(subject);
                 db.SaveChanges();
                 QueryMessage.Text = "The Subject has been deleted successfully";
+            }
+        }
+
+        protected void AssignInstructorBtn_Click(object sender, EventArgs e)
+        {
+            int selectedId = Int32.Parse(lbl_id.Text);
+            AssignAnInstructor(selectedId);
+        }
+
+        private void AssignAnInstructor(int selectedId)
+        {
+            using (SchoolDBContext db = new SchoolDBContext())
+            {
+                Subject subject = db.Subjects.Include("Instructor").Where(s => s.Id == selectedId).FirstOrDefault();
+                Instructor instructor = subject.Instructor;
+
+                subject.Instructor = db.Instructors.Where(i => i.FirstName == Instructor_ddl.Text).FirstOrDefault();
+
+                db.SaveChanges();
+                lbl_instructor.Text = instructor.FirstName + " " + instructor.LastName;
+                QueryMessage.Text = "The Instructor " + instructor.FirstName + " " + instructor.LastName
+                                    + " is now the assigned instructor for the subject: " + subject.Name;
             }
         }
     }

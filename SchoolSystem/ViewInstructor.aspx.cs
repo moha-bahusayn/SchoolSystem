@@ -37,15 +37,35 @@ namespace SchoolSystem
             }
         }
 
-        protected void BackBtn_Click(object sender, EventArgs e)
+        protected void AddSubjectBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("SuperuserDashboard.aspx");
+            int selectedId = Int32.Parse(lbl_id.Text);
+            AddASubject(selectedId);
         }
 
         protected void DeleteBtn_Click(object sender, EventArgs e)
         {
             int selectedId = Int32.Parse(lbl_id.Text);
             DeleteAnInstructor(selectedId);
+        }
+
+        protected void BackBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SuperuserDashboard.aspx");
+        }
+
+        private void AddASubject(int selectedId)
+        {
+            using (SchoolDBContext db = new SchoolDBContext())
+            {
+                Subject subject = new Subject();
+                subject = db.Subjects.Include("Instructor").Where(s => s.Name == Subject_ddl.Text).FirstOrDefault();
+                subject.Instructor = db.Instructors.Where(i => i.Id.ToString() == lbl_id.Text).FirstOrDefault();
+
+                db.SaveChanges();
+                lbl_subject.Text = subject.Name;
+                QueryMessage.Text = "The Subject " + subject.Name + " is assigned to Instructor:  " + subject.Instructor.FirstName;
+            }
         }
 
         private void DeleteAnInstructor(int selectedId)

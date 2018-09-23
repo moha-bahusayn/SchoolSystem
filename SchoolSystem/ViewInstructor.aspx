@@ -8,10 +8,10 @@
             <td>Instructor ID:</td>
             <td>
                 <asp:Label ID="lbl_id" runat="server" Text=""></asp:Label></td>
-            <%--<td>Subject:</td>
+            <td>Subject:</td>
             <td>
                 <asp:Label ID="lbl_subject" runat="server" Text=""></asp:Label>
-            </td>--%>
+            </td>
         </tr>
         <tr>
             <td>First Name:</td>
@@ -31,12 +31,12 @@
         </tr>
     </table>
 
-     <p>
+    <p>
         Assign Instructor to Subject :
         <asp:DropDownList ID="Subject_ddl" runat="server" DataSourceID="SubjectSqlDataSource" DataTextField="Name" DataValueField="Name">
         </asp:DropDownList>
         <asp:Button ID="AddsubjectBtn" runat="server" Text="Assign to Subject." OnClick="AddSubjectBtn_Click" />
-        <asp:SqlDataSource ID="SubjectSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [Name], [ScheduleDay] FROM [Subjects]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SubjectSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnect %>" SelectCommand="SELECT [Id], [Name], [ScheduleDay] FROM [Subjects] WHERE [Instructor_Id] IS NULL;"></asp:SqlDataSource>
     </p>
     <p>
         <asp:Button ID="DeleteBtn" class="btn btn-danger active" runat="server" Text="Delete" OnClick="DeleteBtn_Click" />

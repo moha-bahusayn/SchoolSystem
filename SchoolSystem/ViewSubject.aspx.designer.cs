@@ -49,6 +49,42 @@ namespace SchoolSystem {
         protected global::System.Web.UI.WebControls.Label lbl_instructor;
         
         /// <summary>
+        /// lbl_assignInstructor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_assignInstructor;
+        
+        /// <summary>
+        /// Instructor_ddl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Instructor_ddl;
+        
+        /// <summary>
+        /// AssignInstructorBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AssignInstructorBtn;
+        
+        /// <summary>
+        /// InstructorSqlDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource InstructorSqlDataSource;
+        
+        /// <summary>
         /// DeleteBtn control.
         /// </summary>
         /// <remarks>

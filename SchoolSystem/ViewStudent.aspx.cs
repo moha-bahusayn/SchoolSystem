@@ -35,11 +35,9 @@ namespace SchoolSystem
                     Classroom_ddl.Visible = false;
                     AddClassBtn.Visible = false;
                     lbl_addClass.Visible = false;
-
                 }
                 catch (NullReferenceException)
                 {
-
                     lbl_classroom.Text = "";
                     Classroom_ddl.Visible = true;
                     AddClassBtn.Visible = true;
