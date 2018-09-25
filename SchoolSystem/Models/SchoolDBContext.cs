@@ -6,8 +6,9 @@ namespace SchoolSystem.Models
     {
         public SchoolDBContext() : base("SchoolDB")
         {
+            Database.Initialize(true);
             Database.SetInitializer(new SchoolDBInitializer());
-            //Database.SetInitializer<SchoolDBContext>(new CreateDatabaseIfNotExists<SchoolDBContext>());
+            Database.SetInitializer<SchoolDBContext>(new CreateDatabaseIfNotExists<SchoolDBContext>());
             //DatabaseInitializer.Seed();
         }
 

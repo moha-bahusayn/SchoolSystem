@@ -90,9 +90,5 @@ namespace SchoolSystem
                 ActionClassBtn.Text = "Update!";
             }
         }
-
-        //protected void AddSubjectBtn_Click(object sender, EventArgs e)
-        //{
-        //}
     }
 }
